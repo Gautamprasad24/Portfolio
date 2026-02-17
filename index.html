@@ -1085,22 +1085,26 @@
     window.addEventListener("scroll", revealOnScroll); window.addEventListener("load", revealOnScroll); // loader
     window.addEventListener("load", () => {
 
-      const tl = gsap.timeline();
+  const loader = document.getElementById("loader");
+  if (!loader) return;
 
-      tl.to("#loader h1", {
-        opacity: 0,
-        y: -40,
-        duration: 0.6
-      })
-        .to("#loader", {
-          opacity: 0,
-          duration: 0.8,
-          onComplete: () => {
-            document.getElementById("loader").style.display = "none";
-          }
-        });
+  const tl = gsap.timeline();
 
-    });
+  tl.to("#loader h1", {
+    opacity: 0,
+    y: -40,
+    duration: 0.6
+  })
+  .to("#loader", {
+    opacity: 0,
+    duration: 0.8,
+    onComplete: () => {
+      loader.style.display = "none";
+    }
+  });
+
+});
+
 
 
     const toggle = document.getElementById("themeToggle");
@@ -1209,4 +1213,5 @@
 </body>
 
 </html>
+
 
