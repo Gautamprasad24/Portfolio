@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Hero</title>
+  <title>Portfolio</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -712,7 +712,7 @@
   <!-- MY LATEST PROJECT SECTION -->
   <section class="min-h-screen 
          px-4 sm:px-8 md:px-12 lg:px-20 
-         py-16 md:py-24 reveal">
+         py-16 md:py-24 reveal section-title">
 
 
     <div class="grid 
@@ -756,21 +756,21 @@
                   border-4 border-yellow-500">
 
           <!-- Thumbnail 2 -->
-          <img src="latest_website2.jpg" onclick="loadWebsite('http://furlords.com/', this)" class="thumb rounded-xl 
+          <img src="latest_website2.jpg" onclick="loadWebsite('https://furlords.com/', this)" class="thumb rounded-xl 
                   h-[90px] sm:h-[120px] md:h-[130px] 
                   w-full object-cover cursor-pointer 
                   border-4 border-transparent 
                   hover:border-yellow-500 transition">
 
           <!-- Thumbnail 3 -->
-          <img src="latest_webiste3.jpg" onclick="loadWebsite('http://pixstox.com/', this)" class="thumb rounded-xl 
+          <img src="latest_webiste3.jpg" onclick="loadWebsite('https://pixstox.com/', this)" class="thumb rounded-xl 
                   h-[90px] sm:h-[120px] md:h-[130px] 
                   w-full object-cover cursor-pointer 
                   border-4 border-transparent 
                   hover:border-yellow-500 transition">
 
           <!-- Thumbnail 4 -->
-          <img src="latest_website4.jpg" onclick="loadWebsite('http://safetyprojects.co.in/', this)" class="thumb rounded-xl 
+          <img src="latest_website4.jpg" onclick="loadWebsite('https://safetyprojects.co.in/', this)" class="thumb rounded-xl 
                   h-[90px] sm:h-[120px] md:h-[130px] 
                   w-full object-cover cursor-pointer 
                   border-4 border-transparent 
@@ -784,7 +784,7 @@
       <!-- BIG WEBSITE PREVIEW -->
       <div class="order-2 lg:order-1">
 
-        <iframe id="websitePreview" src="https://priyalgroup.r5advertising.com/" class="rounded-2xl w-full 
+        <iframe id=" websitePreview" src="https://priyalgroup.r5advertising.com/" class="rounded-2xl w-full 
                  h-[260px] sm:h-[340px] md:h-[420px] 
                  bg-white transition-all duration-300" frameborder="0">
         </iframe>
@@ -1060,7 +1060,7 @@
   <script>
     function loadWebsite(url, element) {
       // Change iframe
-      document.getElementById("websitePreview").src = url; // Remove active border from all thumbnails
+      document.getElementById(" websitePreview").src = url; // Remove active border from all thumbnails
       document.querySelectorAll(".thumb").forEach(img => {
         img.classList.remove("border-yellow-500");
         img.classList.add("border-transparent");
@@ -1085,26 +1085,22 @@
     window.addEventListener("scroll", revealOnScroll); window.addEventListener("load", revealOnScroll); // loader
     window.addEventListener("load", () => {
 
-  const loader = document.getElementById("loader");
-  if (!loader) return;
+      const tl = gsap.timeline();
 
-  const tl = gsap.timeline();
+      tl.to("#loader h1", {
+        opacity: 0,
+        y: -40,
+        duration: 0.6
+      })
+        .to("#loader", {
+          opacity: 0,
+          duration: 0.8,
+          onComplete: () => {
+            document.getElementById("loader").style.display = "none";
+          }
+        });
 
-  tl.to("#loader h1", {
-    opacity: 0,
-    y: -40,
-    duration: 0.6
-  })
-  .to("#loader", {
-    opacity: 0,
-    duration: 0.8,
-    onComplete: () => {
-      loader.style.display = "none";
-    }
-  });
-
-});
-
+    });
 
 
     const toggle = document.getElementById("themeToggle");
@@ -1213,5 +1209,3 @@
 </body>
 
 </html>
-
-
