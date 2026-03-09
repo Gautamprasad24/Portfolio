@@ -1382,6 +1382,18 @@ The project focused on clean design, fast loading speed, and scalable frontend a
 
     });
 
+    function toggleProject(button){
+
+const content = button.nextElementSibling;
+
+const icon = button.querySelector("span");
+
+content.classList.toggle("hidden");
+
+icon.textContent = content.classList.contains("hidden") ? "+" : "−";
+
+}
+
   </script>
 
 
@@ -1389,6 +1401,7 @@ The project focused on clean design, fast loading speed, and scalable frontend a
 </body>
 
 </html>
+
 
 
 
