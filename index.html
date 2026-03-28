@@ -18,6 +18,65 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
+
+    
+/* Hide default cursor only on desktop */
+@media (min-width: 769px) {
+
+  body{
+    cursor: none;
+  }
+
+  a,button{
+    cursor: none;
+  }
+
+}
+
+/* Disable cursor on mobile */
+@media (max-width:768px){
+
+  .cursor,
+  .cursor-follower,
+  .mouse-glow{
+    display:none !important;
+  }
+
+}
+    /* Custom Cursor */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #facc15;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease-out, background 0.3s;
+}
+
+.cursor-follower {
+  width: 40px;
+  height: 40px;
+  background: rgba(250, 204, 21, 0.2);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.25s ease-out;
+}
+
+.mouse-glow {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(250,204,21,0.15) 0%, transparent 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
     .anton {
       font-family: 'Anton', sans-serif;
     }
@@ -253,7 +312,9 @@
 
 <body class="dark-mode opacity-0 transition-colors duration-500">
 
-
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+<div class="mouse-glow"></div>
   <!-- LOADER -->
   <!-- <div id="loader" class="fixed inset-0 bg-black flex items-center justify-center z-[9999]">
     <h1 class="text-white font-anton text-6xl tracking-widest">
@@ -820,7 +881,7 @@ This experience strengthened my <strong>full-stack development and deployment wo
                   border-4 border-yellow-500">
 
           <!-- Thumbnail 2 -->
-          <img src="latest_website2.jpg" onclick="loadWebsite('https://furlords.com/', this)" class="thumb rounded-xl 
+          <img src="latest_website2.jpg" onclick="loadWebsite('https://gautamprasad24.github.io/nkrealty/index.html', this)" class="thumb rounded-xl 
                   h-[90px] sm:h-[120px] md:h-[130px] 
                   w-full object-cover cursor-pointer 
                   border-4 border-transparent 
@@ -1249,6 +1310,7 @@ class="glow-icon rotate-icon cursor-pointer">
   </section>
 
   <script>
+
     function loadWebsite(url, element) {
       // Change iframe
       document.getElementById(" websitePreview").src = url; // Remove active border from all thumbnails
@@ -1404,7 +1466,112 @@ content.classList.toggle("hidden");
 icon.textContent = content.classList.contains("hidden") ? "+" : "−";
 
 }
+/* Detect mobile devices */
+const isTouchDevice =
+  'ontouchstart' in window ||
+  navigator.maxTouchPoints > 0 ||
+  navigator.msMaxTouchPoints > 0;
 
+/* Run cursor effects ONLY on desktop */
+if(!isTouchDevice && window.innerWidth > 768){
+
+const cursor = document.querySelector(".cursor");
+const follower = document.querySelector(".cursor-follower");
+const glow = document.querySelector(".mouse-glow");
+
+document.addEventListener("mousemove",(e)=>{
+
+  gsap.to(cursor,{
+    x:e.clientX,
+    y:e.clientY,
+    duration:0.08
+  });
+
+  gsap.to(follower,{
+    x:e.clientX,
+    y:e.clientY,
+    duration:0.25
+  });
+
+  gsap.to(glow,{
+    x:e.clientX,
+    y:e.clientY,
+    duration:0.5
+  });
+
+});
+
+/* Magnetic buttons */
+document.querySelectorAll("a, button").forEach(btn=>{
+
+  btn.addEventListener("mousemove",(e)=>{
+
+    const rect = btn.getBoundingClientRect();
+
+    const x = e.clientX - rect.left - rect.width/2;
+    const y = e.clientY - rect.top - rect.height/2;
+
+    gsap.to(btn,{
+      x:x*0.2,
+      y:y*0.2,
+      duration:0.3
+    });
+
+  });
+
+  btn.addEventListener("mouseleave",()=>{
+
+    gsap.to(btn,{
+      x:0,
+      y:0,
+      duration:0.3
+    });
+
+  });
+
+});
+
+}
+document.querySelectorAll("a, button").forEach(btn => {
+
+  btn.addEventListener("mousemove", (e) => {
+
+    const rect = btn.getBoundingClientRect();
+
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    gsap.to(btn, {
+      x: x * 0.2,
+      y: y * 0.2,
+      duration: 0.3
+    });
+
+  });
+
+  btn.addEventListener("mouseleave", () => {
+
+    gsap.to(btn, {
+      x: 0,
+      y: 0,
+      duration: 0.3
+    });
+
+  });
+
+});
+
+const glow = document.querySelector(".mouse-glow");
+
+document.addEventListener("mousemove", (e) => {
+
+  gsap.to(glow, {
+    x: e.clientX,
+    y: e.clientY,
+    duration: 0.6
+  });
+
+});
   </script>
 
 
