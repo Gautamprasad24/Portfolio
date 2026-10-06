@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { HERO_DATA } from '../data/portfolioData';
 import { sound } from '../utils/audio';
+import developer from "../assets/images/developer.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -166,7 +167,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           {/* Sculpture Image */}
           <img
             ref={portalImageRef}
-            src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1800&auto=format&fit=crop"
+            src={developer}
             alt="Neoclassical sculpture with high-contrast chiaroscuro lighting"
             decoding="async"
             width="1800"

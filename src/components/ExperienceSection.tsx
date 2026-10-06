@@ -18,20 +18,20 @@ const AWARDS_DATA = [
     date: "17 05 2026",
     image: "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop"
   },
-  {
-    platform: "Awwwards",
-    domain: "gautamprasad.dev",
-    honor: "Honorable Mention",
-    date: "26 05 2026",
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=600&auto=format&fit=crop"
-  },
-  {
-    platform: "YouTube",
-    domain: "youtube.com/@gautam",
-    honor: "Featured on CodeGrid",
-    date: "25 06 2026",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop"
-  },
+  // {
+  //   platform: "Awwwards",
+  //   domain: "gautamprasad.dev",
+  //   honor: "Honorable Mention",
+  //   date: "26 05 2026",
+  //   image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=600&auto=format&fit=crop"
+  // },
+  // {
+  //   platform: "YouTube",
+  //   domain: "youtube.com/@gautam",
+  //   honor: "Featured on CodeGrid",
+  //   date: "25 06 2026",
+  //   image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop"
+  // },
   {
     platform: "Mumbai University",
     domain: "mu.ac.in",
@@ -46,13 +46,13 @@ const AWARDS_DATA = [
     date: "10 06 2025",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop"
   },
-  {
-    platform: "Web Techneeq",
-    domain: "webtechneeq.com",
-    honor: "Web Development Intern",
-    date: "15 01 2024",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop"
-  },
+  // {
+  //   platform: "Web Techneeq",
+  //   domain: "webtechneeq.com",
+  //   honor: "Web Development Intern",
+  //   date: "15 01 2024",
+  //   image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop"
+  // },
   {
     platform: "Pride Computers",
     domain: "pridecomputers.in",

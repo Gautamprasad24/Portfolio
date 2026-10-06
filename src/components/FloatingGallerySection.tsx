@@ -2,7 +2,14 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { sound } from '../utils/audio';
-
+import ramanandImage from "../assets/images/ramanand.png";
+import ngandhigroup from "../assets/images/ngandhi_group.png";
+import vidyatrade from "../assets/images/vidyatrade.png";
+import rwsawant from "../assets/images/rwsawant.png";
+import naepl from "../assets/images/naepl.png";
+import namtpl from "../assets/images/namtpl.png";
+import ngc from "../assets/images/ngc.png";
+import sppl from "../assets/images/sppl.png";
 gsap.registerPlugin(ScrollTrigger);
 
 interface FloatingGallerySectionProps {
@@ -26,7 +33,7 @@ const MOCKUP_ITEMS: MockupItem[] = [
   {
     id: "m1",
     title: "VidyaTrade E-Commerce",
-    image: "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=800&auto=format&fit=crop",
+    image: vidyatrade,
     deviceType: "laptop-pedestal",
     targetX: -460,
     targetY: -280,
@@ -36,7 +43,7 @@ const MOCKUP_ITEMS: MockupItem[] = [
   {
     id: "m2",
     title: "N Gandhi Group",
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop",
+    image: ngandhigroup,
     deviceType: "laptop-chair",
     targetX: 0,
     targetY: -320,
@@ -56,7 +63,7 @@ const MOCKUP_ITEMS: MockupItem[] = [
   {
     id: "m4",
     title: "NAEPL Engineering",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
+    image: naepl,
     deviceType: "studio-display",
     targetX: 560,
     targetY: 10,
@@ -66,7 +73,7 @@ const MOCKUP_ITEMS: MockupItem[] = [
   {
     id: "m5",
     title: "RW Sawant Developer",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
+    image: rwsawant,  
     deviceType: "laptop-wood",
     targetX: 450,
     targetY: 290,
@@ -96,7 +103,7 @@ const MOCKUP_ITEMS: MockupItem[] = [
   {
     id: "m8",
     title: "NAMTPL Marine Portal",
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop",
+    image: namtpl,
     deviceType: "studio-monitor",
     targetX: -560,
     targetY: -10,

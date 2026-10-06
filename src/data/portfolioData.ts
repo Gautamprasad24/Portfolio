@@ -1,4 +1,19 @@
 import { Project, Service, ExperienceItem, TechSkill } from '../types';
+import ramanandImage from "../assets/images/ramanand.png";
+import ngandhigroup from "../assets/images/ngandhi_group.png";
+import vidyatrade from "../assets/images/vidyatrade.png";
+import rwsawant from "../assets/images/rwsawant.png";
+import naepl from "../assets/images/naepl.png";
+import namtpl from "../assets/images/namtpl.png";
+import ngc from "../assets/images/ngc.png";
+import sppl from "../assets/images/sppl.png";
+
+
+
+
+
+
+
 
 export const HERO_DATA = {
   nameSans: "Gautam",
@@ -41,7 +56,7 @@ export const PROJECTS: Project[] = [
     role: "Full-Stack Web Developer",
     client: "NG & Gandhi Enterprises",
     description: "A responsive corporate web portal for NG & Gandhi Enterprises featuring structured layouts showcasing company services, intuitive multi-tier navigation, consistent branding, and cross-device accessibility with modern interactive elements.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+    image:ngandhigroup,
     secondaryImages: [
       "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1000&auto=format&fit=crop"
@@ -61,7 +76,7 @@ export const PROJECTS: Project[] = [
     role: "Lead Frontend Developer",
     client: "VidyaTrade International",
     description: "Built with React 19 and Vite, featuring smooth UI micro-animations via Framer Motion, an interactive Swiper.js content slider, fully responsive Tailwind CSS interface, client-side routing, and a serverless contact pipeline via EmailJS.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+    image: vidyatrade,
     secondaryImages: [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000&auto=format&fit=crop"
@@ -81,7 +96,7 @@ export const PROJECTS: Project[] = [
     role: "Full-Stack Developer",
     client: "RW Sawant Group (20+ Years Legacy)",
     description: "A full-stack corporate real estate platform for a premier Mumbai firm. Engineered dynamic property filtering algorithms, interactive lead inquiry forms, and production deployment with high-fidelity mobile responsiveness.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+    image: rwsawant,
     secondaryImages: [
       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1000&auto=format&fit=crop"
     ],
@@ -100,7 +115,7 @@ export const PROJECTS: Project[] = [
     role: "Web Developer",
     client: "NAEPL Engineering",
     description: "A mobile-first corporate web platform using Next.js and Tailwind CSS with modular reusable components, SEO-optimized semantic markup, next-gen image compression, and interactive service showcases.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop",
+    image: naepl,
     tags: ["Next.js", "React.js", "Tailwind CSS", "SEO Architecture"],
     link: "https://naepl.r5advertising.com",
     featured: true,
@@ -116,7 +131,7 @@ export const PROJECTS: Project[] = [
     role: "Web Developer",
     client: "NAMTPL Ltd",
     description: "Responsive corporate website engineered with reusable UI components, multi-category image galleries, and interactive service directories. Optimized performance through efficient component architecture.",
-    image: "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?q=80&w=1200&auto=format&fit=crop",
+    image: namtpl,
     tags: ["Next.js", "Tailwind CSS", "Performance SEO", "UI/UX"],
     link: "https://namtpl.r5advertising.com",
     featured: false,
@@ -132,7 +147,7 @@ export const PROJECTS: Project[] = [
     role: "Full-Stack Developer",
     client: "NGC & Co",
     description: "Scalable corporate website with modern styling, cross-browser compatibility, and intuitive navigation built using Next.js, React.js, and Tailwind CSS.",
-    image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=1200&auto=format&fit=crop",
+    image: ngc,
     tags: ["Next.js", "React.js", "Tailwind CSS", "Cross-Browser"],
     link: "https://ngcco.r5advertising.com",
     featured: false,
@@ -148,7 +163,7 @@ export const PROJECTS: Project[] = [
     role: "Next.js Developer",
     client: "Safety Projects Pvt Ltd",
     description: "Mobile-first corporate website featuring interactive product catalogs, company profile, and safety certifications with optimized routing and SEO structures.",
-    image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?q=80&w=1200&auto=format&fit=crop",
+    image: sppl,
     tags: ["Next.js", "Product Catalog", "Image Optimization", "SEO"],
     link: "https://safetyprojects.co.in",
     featured: false,
@@ -164,42 +179,13 @@ export const PROJECTS: Project[] = [
     role: "Web Developer",
     client: "Ramanand Logistics",
     description: "Responsive logistics website with structured fleet catalogues, customer testimonials, and direct customer enquiries integrated seamlessly with EmailJS.",
-    image: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1200&auto=format&fit=crop",
+    image: ramanandImage,
     tags: ["React.js", "Next.js", "Tailwind CSS", "EmailJS"],
     link: "https://ramanandtempo.com",
     featured: false,
     accentColor: "#881337"
-  },
-  {
-    id: "tadoba-jungle",
-    number: "09",
-    title: "Tadoba Jungle Bucketlist",
-    subtitle: "Wildlife Tourism & Interactive Safari Booking Experience",
-    category: "Travel & Tourism",
-    year: "2024",
-    role: "Frontend Developer",
-    client: "Web Techneeq Client",
-    description: "Designed and built the Tadoba Jungle Bucketlist website using HTML5, CSS3, and JavaScript, boosting user engagement by 30% with an immersive wildlife travel interface.",
-    image: "https://images.unsplash.com/photo-1534177616072-ef7dc120449d?q=80&w=1200&auto=format&fit=crop",
-    tags: ["HTML5", "CSS3", "JavaScript", "UI/UX Design"],
-    featured: false,
-    accentColor: "#ff4d5a"
-  },
-  {
-    id: "khareja",
-    number: "10",
-    title: "Khareja Publishing Hub",
-    subtitle: "Dynamic MERN Stack Blog & Content Management",
-    category: "Full-Stack MERN",
-    year: "2024",
-    role: "Full-Stack Contributor",
-    client: "Khareja Digital",
-    description: "Engineered and maintained dynamic blog publishing features, RESTful API endpoints, and MongoDB schemas on the full-stack MERN platform.",
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1200&auto=format&fit=crop",
-    tags: ["MERN Stack", "MongoDB", "Express.js", "REST APIs"],
-    featured: false,
-    accentColor: "#e11d48"
   }
+ 
 ];
 
 export const GALLERY_CARDS = [
@@ -208,7 +194,7 @@ export const GALLERY_CARDS = [
     title: "VidyaTrade E-Commerce",
     tag: "01 2025",
     device: "laptop-pedestal",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+    image: vidyatrade,
     setup: "White Sculptural Pedestal",
     initialPos: { x: -38, y: 110, scale: 0.85, rot: -8, z: 10 }
   },
@@ -217,7 +203,7 @@ export const GALLERY_CARDS = [
     title: "N Gandhi Group",
     tag: "06 2025",
     device: "laptop-chair",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
+    image: ngandhigroup,
     setup: "Warm Studio Chair",
     initialPos: { x: 38, y: 130, scale: 0.9, rot: 6, z: 15 }
   },
@@ -244,7 +230,7 @@ export const GALLERY_CARDS = [
     title: "RW Sawant Developer",
     tag: "02 2026",
     device: "studio-display",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
+    image: rwsawant,
     setup: "Aluminum Studio Display",
     initialPos: { x: -48, y: 10, scale: 0.85, rot: -4, z: 20 }
   },
@@ -253,7 +239,7 @@ export const GALLERY_CARDS = [
     title: "NAEPL Engineering",
     tag: "03 2026",
     device: "laptop-sofa",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop",
+    image: naepl,
     setup: "Cobalt Studio Stage",
     initialPos: { x: 44, y: 15, scale: 0.92, rot: 8, z: 18 }
   },
@@ -262,25 +248,17 @@ export const GALLERY_CARDS = [
     title: "NAMTPL Marine Portal",
     tag: "04 2026",
     device: "desktop-monitor",
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop",
+    image: namtpl,
     setup: "Architectural Concrete Display",
     initialPos: { x: -35, y: -45, scale: 0.82, rot: 5, z: 8 }
   },
-  {
-    id: "g8",
-    title: "Tadoba Safari UI",
-    tag: "11 2024",
-    device: "tablet-screen",
-    image: "https://images.unsplash.com/photo-1534177616072-ef7dc120449d?q=80&w=800&auto=format&fit=crop",
-    setup: "Vertical Slate Easel",
-    initialPos: { x: 40, y: -40, scale: 0.8, rot: -7, z: 14 }
-  },
+ 
   {
     id: "g9",
     title: "Safety Projects Catalog",
     tag: "12 2025",
     device: "laptop-pedestal",
-    image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?q=80&w=800&auto=format&fit=crop",
+    image: sppl,
     setup: "Floating Prismatic Stage",
     initialPos: { x: -10, y: 125, scale: 0.85, rot: 3, z: 16 }
   },
@@ -289,7 +267,7 @@ export const GALLERY_CARDS = [
     title: "Ramanand Tempo Service",
     tag: "01 2026",
     device: "laptop-rock",
-    image: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=800&auto=format&fit=crop",
+    image:ramanandImage,
     setup: "Metallic Minimal Rig",
     initialPos: { x: 12, y: -50, scale: 0.86, rot: -4, z: 22 }
   }
